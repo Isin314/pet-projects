@@ -1,0 +1,14 @@
+-I
+C:/Users/Krugl/github/pet-projects/tictactoe/build/Desktop_Qt_6_11_0_MinGW_64_bit-u041eu0442u043bu0430u0434u043au0430
+-I
+C:/Users/Krugl/github/pet-projects/tictactoe/build/Desktop_Qt_6_11_0_MinGW_64_bit-u041eu0442u043bu0430u0434u043au0430/tictactoe
+-I
+C:/Users/Krugl/github/pet-projects/tictactoe/build/Desktop_Qt_6_11_0_MinGW_64_bit-u041eu0442u043bu0430u0434u043au0430
+-I
+C:/Qt/6.11.0/mingw_64/qml
+--resource
+C:/Users/Krugl/github/pet-projects/tictactoe/build/Desktop_Qt_6_11_0_MinGW_64_bit-u041eu0442u043bu0430u0434u043au0430/.qt/rcc/qmake_tictactoe.qrc
+--resource
+C:/Users/Krugl/github/pet-projects/tictactoe/build/Desktop_Qt_6_11_0_MinGW_64_bit-u041eu0442u043bu0430u0434u043au0430/.qt/rcc/apptictactoe_raw_qml_0.qrc
+--module
+tictactoe

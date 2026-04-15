@@ -1,0 +1,47 @@
+{
+    "classes": [
+        {
+            "className": "GameServer",
+            "lineNumber": 8,
+            "object": true,
+            "qualifiedClassName": "GameServer",
+            "slots": [
+                {
+                    "access": "private",
+                    "index": 0,
+                    "lineNumber": 15,
+                    "name": "onNewConnection",
+                    "returnType": "void"
+                },
+                {
+                    "access": "private",
+                    "arguments": [
+                        {
+                            "name": "message",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 1,
+                    "lineNumber": 16,
+                    "name": "onMessageReceived",
+                    "returnType": "void"
+                },
+                {
+                    "access": "private",
+                    "index": 2,
+                    "lineNumber": 17,
+                    "name": "onClientDisconnected",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "gameserver.h",
+    "outputRevision": 69
+}

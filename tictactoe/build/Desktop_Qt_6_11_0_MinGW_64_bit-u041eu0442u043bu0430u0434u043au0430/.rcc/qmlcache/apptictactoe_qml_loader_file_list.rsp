@@ -1,0 +1,10 @@
+--resource
+C:/Users/Krugl/github/pet-projects/tictactoe/build/Desktop_Qt_6_11_0_MinGW_64_bit-u041eu0442u043bu0430u0434u043au0430/.qt/rcc/qmake_tictactoe.qrc
+--resource
+C:/Users/Krugl/github/pet-projects/tictactoe/build/Desktop_Qt_6_11_0_MinGW_64_bit-u041eu0442u043bu0430u0434u043au0430/.qt/rcc/apptictactoe_raw_qml_0.qrc
+/qt/qml/tictactoe/Main.qml
+/qt/qml/tictactoe/StartScreen.qml
+/qt/qml/tictactoe/GameScreen.qml
+/qt/qml/tictactoe/GameOverScreen.qml
+/qt/qml/tictactoe/ConnectScreen.qml
+/qt/qml/tictactoe/WaitingScreen.qml

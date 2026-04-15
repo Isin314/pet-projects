@@ -1,0 +1,11 @@
+module tictactoe
+typeinfo apptictactoe.qmltypes
+prefer :/qt/qml/tictactoe/
+Main 254.0 Main.qml
+StartScreen 254.0 StartScreen.qml
+GameScreen 254.0 GameScreen.qml
+GameOverScreen 254.0 GameOverScreen.qml
+ConnectScreen 254.0 ConnectScreen.qml
+WaitingScreen 254.0 WaitingScreen.qml
+depends QtQuick
+

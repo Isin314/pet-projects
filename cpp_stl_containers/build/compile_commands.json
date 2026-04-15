@@ -1,0 +1,14 @@
+[
+{
+  "directory": "C:/Users/Krugl/github/pet-projects/cpp_stl_containers/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\18\\BUILDT~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP -IC:\\Users\\Krugl\\github\\pet-projects\\cpp_stl_containers\\vector /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\cpp_stl_containers.dir\\main.cpp.obj /FdCMakeFiles\\cpp_stl_containers.dir\\ /FS -c C:\\Users\\Krugl\\github\\pet-projects\\cpp_stl_containers\\main.cpp",
+  "file": "C:/Users/Krugl/github/pet-projects/cpp_stl_containers/main.cpp",
+  "output": "C:/Users/Krugl/github/pet-projects/cpp_stl_containers/build/CMakeFiles/cpp_stl_containers.dir/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/Krugl/github/pet-projects/cpp_stl_containers/build",
+  "command": "C:\\PROGRA~2\\MIB055~1\\18\\BUILDT~1\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP -IC:\\Users\\Krugl\\github\\pet-projects\\cpp_stl_containers\\vector /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\cpp_stl_containers.dir\\vector\\Test_Vector.cpp.obj /FdCMakeFiles\\cpp_stl_containers.dir\\ /FS -c C:\\Users\\Krugl\\github\\pet-projects\\cpp_stl_containers\\vector\\Test_Vector.cpp",
+  "file": "C:/Users/Krugl/github/pet-projects/cpp_stl_containers/vector/Test_Vector.cpp",
+  "output": "C:/Users/Krugl/github/pet-projects/cpp_stl_containers/build/CMakeFiles/cpp_stl_containers.dir/vector/Test_Vector.cpp.obj"
+}
+]

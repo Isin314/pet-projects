@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="/qt/qml/tictactoe/">
+    <file alias="Main.qml">C:/Users/Krugl/github/pet-projects/tictactoe/Main.qml</file>
+    <file alias="StartScreen.qml">C:/Users/Krugl/github/pet-projects/tictactoe/StartScreen.qml</file>
+    <file alias="GameScreen.qml">C:/Users/Krugl/github/pet-projects/tictactoe/GameScreen.qml</file>
+    <file alias="GameOverScreen.qml">C:/Users/Krugl/github/pet-projects/tictactoe/GameOverScreen.qml</file>
+    <file alias="ConnectScreen.qml">C:/Users/Krugl/github/pet-projects/tictactoe/ConnectScreen.qml</file>
+    <file alias="WaitingScreen.qml">C:/Users/Krugl/github/pet-projects/tictactoe/WaitingScreen.qml</file>
+  </qresource>
+</RCC>
+

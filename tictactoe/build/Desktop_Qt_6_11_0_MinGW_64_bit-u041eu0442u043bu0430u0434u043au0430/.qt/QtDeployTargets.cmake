@@ -1,0 +1,3 @@
+set(__QT_DEPLOY_TARGET_apptictactoe_FILE C:/Users/Krugl/github/pet-projects/tictactoe/build/Desktop_Qt_6_11_0_MinGW_64_bit-u041eu0442u043bu0430u0434u043au0430/apptictactoe.exe)
+set(__QT_DEPLOY_TARGET_apptictactoe_TYPE EXECUTABLE)
+set(__QT_DEPLOY_TARGET_apptictactoe_RUNTIME_DLLS C:/Qt/6.11.0/mingw_64/bin/Qt6Quick.dll;C:/Qt/6.11.0/mingw_64/bin/Qt6WebSockets.dll;C:/Qt/6.11.0/mingw_64/bin/Qt6OpenGL.dll;C:/Qt/6.11.0/mingw_64/bin/Qt6Gui.dll;C:/Qt/6.11.0/mingw_64/bin/Qt6QmlMeta.dll;C:/Qt/6.11.0/mingw_64/bin/Qt6QmlModels.dll;C:/Qt/6.11.0/mingw_64/bin/Qt6QmlWorkerScript.dll;C:/Qt/6.11.0/mingw_64/bin/Qt6Qml.dll;C:/Qt/6.11.0/mingw_64/bin/Qt6Network.dll;C:/Qt/6.11.0/mingw_64/bin/Qt6Core.dll)

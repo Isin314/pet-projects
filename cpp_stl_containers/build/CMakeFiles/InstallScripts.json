@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/Krugl/github/pet-projects/cpp_stl_containers/build/cmake_install.cmake",
+		"C:/Users/Krugl/github/pet-projects/cpp_stl_containers/build/vector/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

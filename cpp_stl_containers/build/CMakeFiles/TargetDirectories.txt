@@ -1,0 +1,5 @@
+C:/Users/Krugl/github/pet-projects/cpp_stl_containers/build/CMakeFiles/cpp_stl_containers.dir
+C:/Users/Krugl/github/pet-projects/cpp_stl_containers/build/CMakeFiles/edit_cache.dir
+C:/Users/Krugl/github/pet-projects/cpp_stl_containers/build/CMakeFiles/rebuild_cache.dir
+C:/Users/Krugl/github/pet-projects/cpp_stl_containers/build/vector/CMakeFiles/edit_cache.dir
+C:/Users/Krugl/github/pet-projects/cpp_stl_containers/build/vector/CMakeFiles/rebuild_cache.dir
