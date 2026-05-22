@@ -1,3 +1,3 @@
-add_library(vector INTERFACE)
+add_library(Vector INTERFACE)
 
-target_include_directories(vector INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(Vector INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
