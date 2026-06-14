@@ -18,11 +18,18 @@ void destructor_test();
 void operator_copy_test();
 void operator_move_test();
 void operator_init_list_test();
+void assing_iter_test();
+void assign_n_test();
 
+//iterator
+// пока что нет
 
-void size_test();
-void capacity_test();
+// capacity
+// пока что не все
+void resize_test();
+void resize_c_test();
 void reserve_test();
+
 void push_back_test();
 void at_test();
 void at_outofrange_test();
@@ -30,9 +37,8 @@ void iterator_test();
 void citerator_test();
 void empty_test();
 void not_empty_test();
-void assign_test();
 void riterator_test();
 void criterator_test();
-void resize_test();
+
 
 void test();

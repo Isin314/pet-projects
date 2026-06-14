@@ -161,13 +161,46 @@ class My_Vector{
         return *this;
     }
 
-    // template<class InpitIter>
-    // void assign(InputIter first, InputIter last) {}
+    template<class InputIter>
+    void assign(InputIter first, InputIter last,
+            typename std::enable_if<!std::is_integral<InputIter>::value>::type* = 0) 
+    {
+        dealloc();
+        size_ = std::distance(first,last);
+        capacity_ = std::distance(first,last);
+        vector_ = alloc_.allocate(capacity_);
+        size_type i=0;
+        for(InputIter it{first}; it != last;++it)
+        {
+            alloc_.construct(vector_+i,*it);
+            ++i;
+        }
+    }
+
     // template<container-compatible-range<T> R>
     // void assign_range(R&& rg) {} // не делаю пока потому что с++20
-    // void assing(size_type n, const T& u) {}
+    
+    void assign(size_type n, const T& u) 
+    {
+        dealloc();
+        size_ = n;
+        capacity_ = n;
+        vector_ = alloc_.allocate(capacity_);
+        for(size_type i=0;i < size_;++i)
+            alloc_.construct(vector_+i,u);
+    }
+
     void assign(std::initializer_list<T> l)
-    {}
+    {
+        dealloc();
+        vector_ = alloc_.allocate(capacity_);
+        size_type i = 0; 
+        for(const value_type& elem : l)
+        {
+            alloc_.construct(vector_+i,elem);
+            ++i;
+        }
+    }
     // allocator_type get_allocator() const noexept {}
 
     //iterators
@@ -242,11 +275,7 @@ class My_Vector{
             return;
         pointer vector_realloc = alloc_.allocate(new_cap);
         std::uninitialized_copy(vector_,vector_+size_,vector_realloc);
-        for(size_type i=0; i < size_;++i)
-        {
-            alloc_.destroy(vector_+i);
-        }
-        alloc_.deallocate(vector_,capacity_);
+        dealloc();
         vector_ = vector_realloc;
         capacity_ = new_cap;
     }
@@ -258,8 +287,8 @@ class My_Vector{
             for(size_type i=sz;i < size_;++i)
             {
                 alloc_.destroy(vector_+i);
-                size_=i;
             }
+            size_ = sz;
         }
         else if(sz > size_ && sz <=capacity_)
         {
@@ -279,12 +308,42 @@ class My_Vector{
             size_ = sz;
         }
     }
-    //void resize(size_type sz, const T* c);
+    void resize(size_type sz, const T& c)
+    {
+        if(sz < size_)
+        {
+            for(size_type i=sz;i < size_;++i)
+            {
+                alloc_.destroy(vector_+i);
+                size_=i;
+            }
+        }
+        else if(sz > size_ && sz <=capacity_)
+        {
+            for(size_type i=size_;i < sz;++i)
+            {
+                alloc_.construct(vector_+i, c);
+            }
+            size_ = sz;
+        }
+        else if (sz > capacity_)
+        {
+            realloc_(sz);
+            for(size_type i=size_;i < sz;++i)
+            {
+                alloc_.construct(vector_+i, c);
+            }
+            size_ = sz;
+        }
+    }
     void reserve(size_type new_cap)
     {
         realloc_(new_cap);
     }
-    //void shrink_to_fit();
+    void shrink_to_fit()
+    {
+        realloc_(size_);
+    }
 
     //element access
     reference operator[](unsigned index)
@@ -295,13 +354,37 @@ class My_Vector{
     {
         return vector_[index];
     }
-    // reference at(size_type index)
-    // {}
-    // const_reference at(size_type index) const;
-    // reference front();
-    // const_reference front() const;
-    // reference back();
-    // const_reference back() const;
+    reference at(size_type index)
+    {
+        assert(index < size_ && "index out of size");
+        return vector_[index];
+
+    }
+    const_reference at(size_type index) const
+    {
+        assert(index < size_ && "index out of size");
+        return vector_[index];
+    }
+    reference front()
+    {
+        assert( size_ != 0 && "vector is empty");
+        return vector_[0];
+    }
+    const_reference front() const
+    {
+        assert( size_ != 0 && "vector is empty");
+        return vector_[0];
+    }
+    reference back()
+    {
+        assert( size_ != 0 && "vector is empty");
+        return vector_[size_-1];
+    }
+    const_reference back() const
+    {
+        assert( size_ != 0 && "vector is empty");
+        return vector_[size_-1];
+    }
 
 
 

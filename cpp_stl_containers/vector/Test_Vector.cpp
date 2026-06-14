@@ -15,12 +15,15 @@ void run_tests(){
     operator_copy_test();
     operator_move_test();
     operator_init_list_test();
+    assing_iter_test();
+    assign_n_test();
 
-    // reserve_test();
+    //capacity
+    resize_test();
+    reserve_test();
     // push_back_test();
     
-    // size_test();
-    // capacity_test();
+
     // at_test();
     // at_outofrange_test();
     // iterator_test();
@@ -30,17 +33,19 @@ void run_tests(){
     // assign_test();
     // riterator_test();
     // criterator_test();
-    // resize_test();
+
 
     test();
 }
 
 void test(){
-    // std::vector<int> a{1,2,3};
+    // std::vector<int> a;
+    My_Vector<int> a{1,2,3};
     // std::vector<int> b{1};
     // a = b;
     // a[0] = 2;
-    // std::cout << b[0];
+    std::cout << a.size();
+    std::cout << a.back();
 };
 //construct/copy/move/destroy
 
@@ -159,6 +164,32 @@ void operator_init_list_test()
 
 }
 
+void assing_iter_test()
+{
+    My_Vector<int> a{1,2};
+    My_Vector<int> b{4,5,6};
+    a.assign(b.begin(),b.end());
+    assert(a.size() == 3 && "vector_iter_test test failed");
+    assert(a.capacity() == 3 && "vector_iter_test test failed");
+    for(size_t i=0; i < b.size(); ++i)
+    {
+        assert(a[i] == b[i] && "vector_iter_test test failed");
+    }
+
+}
+
+void assign_n_test()
+{
+    My_Vector<int> a;
+    My_Vector<int> b(3,5);
+    a.assign(3,5);
+    assert(a.size() == 3 && "vector_n_value_test test failed");
+    assert(a.capacity() == 3 && "vector_n_value_test test failed");
+    for(size_t i=0; i < b.size(); ++i)
+    {
+        assert(a[i] == b[i] && "vector_n_value_test test failed");
+    }
+}
 
 // void riterator_test(){
 //     My_Vector<int> a{1,2,3};
@@ -182,26 +213,34 @@ void operator_init_list_test()
 //     }
 // }
 
+//capacity
+void resize_test()
+{
+    My_Vector<int> a{1,2};
+    My_Vector<int> b{1,2,0,0};
+    a.resize(4);
+    for(size_t i=0; i < b.size(); ++i)
+    {
+        assert(a[i] == b[i] && "vector_n_value_test test failed");
+    }
+}
 
+void resize_c_test()
+{
+    My_Vector<int> a{1,2};
+    My_Vector<int> b{1,2,3,3};
+    a.resize(4,3);
+    for(size_t i=0; i < b.size(); ++i)
+    {
+        assert(a[i] == b[i] && "vector_n_value_test test failed");
+    }
+}
 
-// void size_test(){
-//     My_Vector<int> a{1,2,2};
-//     std::vector<int> b{1,2,3};
-//     for(size_t i=0; i < b.size(); ++i)
-//     {
-//         assert(a.size() == b.size() && "size test failed");
-//     }
-// }
-// void capacity_test(){
-//     My_Vector<int> a;
-//     assert(a.capacity() == 1 && "capacity test failed");
-// }
-
-// void reserve_test(){
-//     My_Vector<int> a;
-//     a.reserve(3);
-//     assert(a.capacity() == 3 && "reserve test failed");
-// }
+void reserve_test(){
+    My_Vector<int> a;
+    a.reserve(3);
+    assert(a.capacity() == 3 && "reserve test failed");
+}
 // void push_back_test(){
 //     My_Vector<int> a;
 //     a.push_back(1);
@@ -258,24 +297,3 @@ void not_empty_test(){
     const My_Vector<int> a{1};
     assert(a.empty() == false && "not empty test failed");
 }
-// void assign_test(){
-//     My_Vector<int> a{1,2,3};
-//     a.assign({4,5,6});
-//     std::vector<int> b{1,2,3};
-//     b.assign({4,5,6});
-//     for(size_t i=0; i < b.size(); ++i)
-//     {
-//         assert(a[i] == b[i] && "initializer list test failed");
-//     }
-// }
-
-// void resize_test()
-// {
-//     My_Vector<int> a{1,2};
-//     a.resize(4);
-//     for(auto i : a)
-//     {
-//         std::cout << i << ' ';
-//     }
-// }
-
